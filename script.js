@@ -93,19 +93,35 @@ function mostrarProdutos(lista) {
 
     container.innerHTML = "";
 
+    if (lista.length === 0) {
+
+        container.innerHTML = `
+            <div class="card">
+                <h3>Produto não encontrado</h3>
+
+                <p>
+                    Tente pesquisar por outro produto.
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
     lista.forEach(produto => {
 
         const classe =
             produto.variacao >= 0
-            ? "alta"
-            : "baixa";
+                ? "alta"
+                : "baixa";
 
         const seta =
             produto.variacao >= 0
-            ? "▲"
-            : "▼";
+                ? "▲"
+                : "▼";
 
-        const card = document.createElement("div");
+        const card =
+            document.createElement("div");
 
         card.className = "card";
 
@@ -113,7 +129,9 @@ function mostrarProdutos(lista) {
 
             <div class="produto-topo">
 
-                <h3>${produto.nome}</h3>
+                <h3>
+                    ${produto.nome}
+                </h3>
 
                 <span class="icone">
                     ${produto.icone}
@@ -122,13 +140,16 @@ function mostrarProdutos(lista) {
             </div>
 
             <div class="preco">
-                R$ ${produto.preco.toLocaleString(
+
+                R$
+                ${produto.preco.toLocaleString(
                     "pt-BR",
                     {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2
                     }
                 )}
+
             </div>
 
             <div class="unidade">
@@ -136,17 +157,17 @@ function mostrarProdutos(lista) {
             </div>
 
             <div class="${classe}">
-                ${seta} ${produto.variacao.toFixed(2)}%
+                ${seta}
+                ${produto.variacao.toFixed(2)}%
+                hoje
             </div>
+
         `;
 
         container.appendChild(card);
 
     });
 }
-
-
-// Mostrar produtos quando o site abrir
 
 mostrarProdutos(produtos);
 
@@ -158,18 +179,71 @@ mostrarProdutos(produtos);
 const pesquisa =
     document.getElementById("pesquisa");
 
-pesquisa.addEventListener("input", function () {
+pesquisa.addEventListener(
+    "input",
+    function () {
 
-    const texto =
-        pesquisa.value.toLowerCase();
+        const texto =
+            pesquisa.value.toLowerCase();
 
-    const resultado =
-        produtos.filter(produto =>
-            produto.nome
-                .toLowerCase()
-                .includes(texto)
-        );
+        const resultado =
+            produtos.filter(produto =>
+                produto.nome
+                    .toLowerCase()
+                    .includes(texto)
+            );
 
-    mostrarProdutos(resultado);
+        mostrarProdutos(resultado);
 
-});
+    }
+);
+
+
+// ===============================
+// TEMA ESCURO
+// ===============================
+
+const btnTema =
+    document.getElementById("btnTema");
+
+btnTema.addEventListener(
+    "click",
+    function () {
+
+        document.body.classList.toggle("dark");
+
+        if (
+            document.body.classList.contains("dark")
+        ) {
+
+            btnTema.innerText =
+                "☀️ Tema claro";
+
+        } else {
+
+            btnTema.innerText =
+                "🌙 Tema escuro";
+
+        }
+
+    }
+);
+
+
+// ===============================
+// VOLTAR AO TOPO
+// ===============================
+
+const btnVoltarTopo =
+    document.querySelector(
+        ".btn-voltar-topo"
+    );
+
+btnVoltarTopo.addEventListener(
+    "click",
+    function () {
+
+        window.scrollTo(0, 0);
+
+    }
+);
