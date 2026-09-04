@@ -1,64 +1,151 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Cotações Agro</title>
+    <title>Cotações Agro | Preços Agrícolas</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- CABEÇALHO -->
     <header>
-        <div>
-            <h1>🌱 Cotações Agro</h1>
-            <p>Preços dos produtos agrícolas</p>
+
+        <div class="logo">
+            <span>🌱</span>
+
+            <div>
+                <h1>Cotações Agro</h1>
+                <p>Mercado agrícola em um só lugar</p>
+            </div>
         </div>
 
-        <div id="dataAtual"></div>
+        <div class="data" id="dataAtual"></div>
+
     </header>
 
+
+    <!-- BANNER -->
     <section class="banner">
-        <h2>Cotações do Dia</h2>
-        <p>Acompanhe os principais preços do mercado agrícola.</p>
+
+        <div class="banner-conteudo">
+
+            <span class="etiqueta">📈 MERCADO AGRÍCOLA</span>
+
+            <h2>
+                Cotações dos principais
+                <strong>produtos agrícolas</strong>
+            </h2>
+
+            <p>
+                Consulte preços, variações e informações
+                dos principais produtos do mercado.
+            </p>
+
+        </div>
+
     </section>
 
+
+    <!-- CONTEÚDO -->
     <main>
 
         <div class="topo">
-            <h2>📊 Produtos</h2>
 
-            <input
-                type="text"
-                id="pesquisa"
-                placeholder="Pesquisar produto..."
-            >
+            <div>
+                <span class="titulo-pequeno">MERCADO</span>
+                <h2>📊 Cotações do Dia</h2>
+            </div>
+
+            <div class="pesquisa-box">
+
+                <span>🔎</span>
+
+                <input
+                    type="text"
+                    id="pesquisa"
+                    placeholder="Pesquisar produto..."
+                >
+
+            </div>
+
         </div>
 
+
+        <!-- CARDS -->
         <div id="listaProdutos" class="produtos"></div>
 
+
+        <!-- INFORMAÇÕES -->
         <section class="sobre">
-            <h2>Sobre o Cotações Agro</h2>
 
-            <p>
-                Consulte os preços de soja, milho, trigo, café,
-                arroz, algodão e outros produtos agrícolas.
-            </p>
+            <div class="sobre-icone">
+                🌾
+            </div>
 
-            <p>
-                Os valores exibidos atualmente são demonstrativos.
-                Para trabalhar com preços reais, o site poderá ser
-                conectado a uma API de cotações.
-            </p>
+            <div>
+
+                <span class="titulo-pequeno">
+                    SOBRE O SITE
+                </span>
+
+                <h2>Cotações Agro</h2>
+
+                <p>
+                    Acompanhe as principais cotações do mercado
+                    agrícola em uma interface simples e moderna.
+                </p>
+
+                <p class="aviso">
+                    ⚠️ Os valores apresentados atualmente são
+                    demonstrativos. Para utilizar cotações reais,
+                    conecte o projeto a uma API de dados agrícolas.
+                </p>
+
+            </div>
+
         </section>
 
     </main>
 
+
+    <!-- CONTROLES -->
+    <div class="controles">
+
+        <!-- Tema escuro -->
+        <button class="btn-tema" id="btnTema">
+            🌙 Tema escuro
+        </button>
+
+        <!-- Voltar ao topo -->
+        <button class="btn-voltar-topo">
+            ↑ Voltar ao topo
+        </button>
+
+    </div>
+
+
+    <!-- RODAPÉ -->
     <footer>
-        <p>© 2026 Cotações Agro</p>
+
+        <div class="footer-logo">
+            🌱 <strong>Cotações Agro</strong>
+        </div>
+
+        <p>
+            Informações agrícolas de forma simples e acessível.
+        </p>
+
+        <small>
+            © 2026 Cotações Agro
+        </small>
+
     </footer>
+
 
     <script src="script.js"></script>
 
