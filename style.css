@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6f3;
+    color: #222;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: #176b35;
+    color: white;
+
+    padding: 25px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+#dataAtual {
+    font-size: 14px;
+}
+
+/* BANNER */
+
+.banner {
+    background: linear-gradient(
+        135deg,
+        #176b35,
+        #29934d
+    );
+
+    color: white;
+
+    padding: 55px 8%;
+}
+
+.banner h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+/* CONTEÚDO */
+
+main {
+    width: 84%;
+    max-width: 1200px;
+
+    margin: 35px auto;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    gap: 15px;
+}
+
+.topo h2 {
+    color: #176b35;
+}
+
+#pesquisa {
+    width: 270px;
+
+    padding: 13px 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+#pesquisa:focus {
+    border-color: #176b35;
+}
+
+/* PRODUTOS */
+
+.produtos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+}
+
+.card {
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.produto-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.produto-topo h3 {
+    color: #176b35;
+    font-size: 20px;
+}
+
+.icone {
+    font-size: 30px;
+}
+
+.preco {
+    font-size: 28px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.unidade {
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+.alta {
+    color: #159447;
+
+    font-weight: bold;
+}
+
+.baixa {
+    color: #d93636;
+
+    font-weight: bold;
+}
+
+/* SOBRE */
+
+.sobre {
+    background: white;
+
+    margin-top: 40px;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.sobre h2 {
+    color: #176b35;
+
+    margin-bottom: 15px;
+}
+
+.sobre p {
+    line-height: 1.6;
+
+    margin-bottom: 10px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #123d23;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 50px;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .banner h2 {
+        font-size: 30px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    .topo {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    #pesquisa {
+        width: 100%;
+    }
+}
