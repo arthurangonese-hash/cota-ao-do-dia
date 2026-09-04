@@ -1,0 +1,66 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cotações Agro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>🌱 Cotações Agro</h1>
+            <p>Preços dos produtos agrícolas</p>
+        </div>
+
+        <div id="dataAtual"></div>
+    </header>
+
+    <section class="banner">
+        <h2>Cotações do Dia</h2>
+        <p>Acompanhe os principais preços do mercado agrícola.</p>
+    </section>
+
+    <main>
+
+        <div class="topo">
+            <h2>📊 Produtos</h2>
+
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="Pesquisar produto..."
+            >
+        </div>
+
+        <div id="listaProdutos" class="produtos"></div>
+
+        <section class="sobre">
+            <h2>Sobre o Cotações Agro</h2>
+
+            <p>
+                Consulte os preços de soja, milho, trigo, café,
+                arroz, algodão e outros produtos agrícolas.
+            </p>
+
+            <p>
+                Os valores exibidos atualmente são demonstrativos.
+                Para trabalhar com preços reais, o site poderá ser
+                conectado a uma API de cotações.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Cotações Agro</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
